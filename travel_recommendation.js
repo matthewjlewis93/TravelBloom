@@ -7,6 +7,19 @@ function searchResults (event) {
     fetch("./travel_recommendation_api.json")
     .then(response => response.json())
     .then(data => {
+        if ((searchQuery=="country") || (searchQuery=="countries")){
+            console.log('country')
+            data.countries.forEach(country => {
+                country.cities.forEach(city => {
+                    resultDiv.style.display = 'flex';
+                    let r = document.createElement('div');
+                    r.classList.add("one-result");
+                    r.style.backgroundImage = `url(${city.imageUrl})`;
+                    r.innerHTML = `<h2>${city.name}</h2><p>${city.description}</p>`;
+                    resultDiv.appendChild(r);
+                })
+            })
+        }else{
         for (let cat = 0; cat<categories.length;cat++) {
             if (categories[cat].includes(searchQuery)) {
                 resultDiv.style.display = 'flex';
@@ -25,7 +38,8 @@ function searchResults (event) {
                         r.style.backgroundImage = `url(${rec.imageUrl})`;
                         r.innerHTML = `<h2>${rec.name}</h2><p>${rec.description}</p>`;
                         resultDiv.appendChild(r);                        
-                    })
+                        })
+                    }
                 }
             }
         }
