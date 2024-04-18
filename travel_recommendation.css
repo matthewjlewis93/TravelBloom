@@ -1,0 +1,164 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("./images/sscenic.jpg");
+    background-size: cover;
+    background-position: 40%;
+    background-attachment: fixed;
+    height:100vh;
+    color:white;
+    text-shadow: 0px 0px 4px black;
+}
+h1 {
+    margin: 10px 0px;
+}
+p {
+    font-size: x-large;
+}
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo-container img {
+    transform: rotate(25deg);
+}
+#travelboom {
+    display: inline;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+#search {
+    width: 295px;
+}
+
+#search input,button {
+    height: 27px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding:10px;
+    margin:0px;
+    background-image: linear-gradient(to left, rgba(255, 179, 179, 0.6), rgb(255, 220, 167, 0.6), rgb(224, 255, 255, 0.6));
+}
+nav a {
+    font-family:'Times New Roman', Times, serif;
+    font-size: large ;
+    padding: 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#home-body {
+    font-family: sans-serif;
+    text-shadow: 0px 0px 2px black;
+    background-color: rgba(128, 128, 128, 0.25);
+    font-size: 5vh;
+    padding: 30px;
+    margin: 5% 30% 10px 30px;
+    border: 10px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5%;
+}
+
+#button-div {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#button-div button {
+    height: 70px;
+    width: 190px;
+    background-image: linear-gradient(to left, rgba(255, 179, 179), rgb(255, 220, 167), rgb(224, 255, 255));
+    color: white;
+    font-size: xx-large;
+    border: 5px solid white;
+    text-shadow: 0px 0px 4px black;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+    height: 50%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#people {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.person {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 250px;
+    border: 1px dashed white;
+}
+
+.person-img {
+    float: left;
+    height: 50px;
+}
+.person * {
+    margin: 5px;
+}
+.person h4 {
+    text-decoration: dashed underline;
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 60%;
+}
+.contact-message {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 60%;
+    height: 20vh;
+}
+
+#results {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    position: absolute;
+    height: 90svh;
+    top:70px;
+    width: 80vw;
+    border: 5px solid white;
+    border-radius: 5%;
+    margin: 0px 10vw;
+    overflow-y: auto;
+    z-index: 1;
+    background-image: linear-gradient(to top, rgba(255, 179, 179), rgb(255, 220, 167), rgb(224, 255, 255));
+}
+
+.one-result {
+    width:70%;
+    margin: 5% 0%;
+    height: 40%;
+    min-height: 40%;
+    border-radius: 5%;
+    background-size: cover;
+    padding: 5%;
+    background-position:center ;
+    text-align: center;
+}
+.one-result h2 {
+    font-size: 90px;
+    margin-top: 0px;
+}
